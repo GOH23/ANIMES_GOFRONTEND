@@ -1,5 +1,5 @@
 import { Avatar, Box, Button, Grid, Paper, TextField, Typography } from "@mui/material";
-import axios from "./axios.js";
+import axios from "./axios";
 import { useState } from "react";
 import { Form, Badge } from "react-bootstrap";
 import { useDispatch } from "react-redux";

@@ -4,7 +4,7 @@ import { Alert, Button } from "@mui/material"
 import { useEffect, useState } from "react"
 import { FecthOptionGet } from "../Redux/Slices/OptionOfAnime";
 import { useParams } from "react-router-dom";
-import axios from "./axios.js";
+import axios from "./axios";
 import { selectIsActivated } from "../Redux/Slices/IsActivated";
 export function StatusofAnime() {
     const dispatch = useDispatch();

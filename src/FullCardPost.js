@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import axios from './Components/axios.js'
+import axios from './Components/axios'
 import { Container, Row, Col, Carousel, Badge } from "react-bootstrap";
 
 import { useEffect, useState } from 'react';

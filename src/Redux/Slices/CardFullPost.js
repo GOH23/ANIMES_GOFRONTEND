@@ -1,5 +1,5 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "../../Components/axios.js";
+import axios from "../../Components/axios";
 export const FecthCardFullPost = createAsyncThunk('anime/FecthCardFullPost',async (id)=>{
     const { data } = await axios.get(`/animes/${id}`);
     return data;

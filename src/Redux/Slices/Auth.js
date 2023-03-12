@@ -1,5 +1,5 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "../../Components/axios.js";
+import axios from "../../Components/axios";
 export const FecthAuth = createAsyncThunk('auth/FecthAuth',async (params)=>{
     const {data } = await axios.post('/auth/login',params);
     return data;

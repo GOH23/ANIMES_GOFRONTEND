@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
-import axios from './axios.js'
+import axios from './axios'
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
