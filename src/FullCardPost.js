@@ -38,12 +38,6 @@ export function FullCardPost() {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-    window.yaContextCb.push(()=>{
-        Ya.Context.AdvManager.render({
-            renderTo: 'yandex_rtb_R-A-2248821-1',
-            blockId: 'R-A-2248821-1'
-        })
-    })
     console.log()
     return (
         <>
@@ -118,7 +112,7 @@ export function FullCardPost() {
                         </Row>
                     </> : <h4 className="text-center">Серии не загружены</h4>}
 
-                    <div id="yandex_rtb_R-A-2248821-1"></div>
+
 
                 </Paper>
 
