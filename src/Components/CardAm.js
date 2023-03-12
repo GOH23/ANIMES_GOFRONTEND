@@ -6,10 +6,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { StarForOneCard } from './StarForOneCard';
-
 export function CardAm(props) {
-
-    
     return (<>
         {props.items.map(el => (<Grid key={el._id} item><Card  sx={{ maxWidth: 290 }}>
             <Link to={`/anime/${el._id}`} className='text-decoration-none'>
