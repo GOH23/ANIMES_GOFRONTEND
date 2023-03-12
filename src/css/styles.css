@@ -1,0 +1,13 @@
+body{
+    background: url("../../public/img/anime-background-26.jpg");
+    background-size: 100% auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: cover;
+}
+.NewItemCarousel{
+    background-color: rgba(38, 0, 255, 0.575);
+}
+.link-color{
+    color: black;
+}
