@@ -25,7 +25,6 @@ export function AnimesList() {
                         })
                         SetFilterAnimes(filter)
                     }
-
                 }} color='info' sx={{fontSize: 20,width: '100%', backgroundColor: 'aliceblue' }} />
                 <Button  sx={{width: '100%',marginTop: 1}} variant='contained'>СБРОСИТЬ ВСЕ</Button>
             </Box>
