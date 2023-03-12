@@ -1,5 +1,5 @@
 import { Box, Button, Container, Grid, InputBase } from '@mui/material'
-import { CardAm } from './Components/CardComponent/CardAm.js'
+import { CardAm } from './Components/CardAm.js'
 import axios from './Components/axios.js'
 import { useEffect, useState } from 'react'
 

@@ -6,9 +6,9 @@ import { useEffect, useState } from 'react';
 import { Paper, Skeleton, Tab, Tabs } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { FecthCardFullPost } from './Redux/Slices/CardFullPost.js';
-import { StarRating } from './Components/CardComponent/StarRatibgForAnime/StarRating.js';
-import { Commentsadd } from './Components/ForComments/Comentsadd.js';
-import { StatusofAnime } from './Components/CardComponent/StatusOfAnime/StatusofAnime.js';
+import { StarRating } from './Components/StarRating.js';
+import { Commentsadd } from './Components/Comentsadd.js';
+import { StatusofAnime } from './Components/StatusofAnime.js';
 
 export function FullCardPost() {
 

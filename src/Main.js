@@ -1,6 +1,6 @@
 import { Paper } from "@mui/material";
-import { ThreeCards } from "./Components/ForMainPageCard/ThreeCard";
-import { News } from "./Components/ForNews/NewsofSite";
+import { ThreeCards } from "./Components/ThreeCard";
+import { News } from "./Components/NewsofSite";
 
 export function MainPage() {
     return (<Paper sx={{padding: 4,minHeight: '100vh'}}>

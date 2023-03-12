@@ -4,8 +4,8 @@ import { Avatar, Divider, Paper, Chip, CircularProgress, Alert } from "@mui/mate
 import { Container, Row, Col } from "react-bootstrap";
 import {  useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
-import { SettingofProfile } from "./Components/SettingChangeOfProfile/SettingsofProfile";
-import { StatusS } from "./Components/SettingChangeOfProfile/StatusProfileAnime";
+import { SettingofProfile } from "./Components/SettingsofProfile";
+import { StatusS } from "./Components/StatusProfileAnime";
 import { selectIsAuth } from "./Redux/Slices/Auth";
 
 export function Profile() {
