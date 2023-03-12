@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { logout, selectIsAuth } from "../../Redux/Slices/Auth";
+import { logout, selectIsAuth } from "../Redux/Slices/Auth";
 function Header(props) {
 
   const isAuth = useSelector(selectIsAuth)

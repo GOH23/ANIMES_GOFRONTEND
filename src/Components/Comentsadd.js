@@ -1,10 +1,10 @@
 import { Button } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { Alert, Pagination, Paper } from '@mui/material';
-import axios from '../axios';
+import axios from './axios';
 import { useEffect, useState } from 'react';
-import { selectIsAuth } from '../../Redux/Slices/Auth';
-import { selectIsActivated } from '../../Redux/Slices/IsActivated'
+import { selectIsAuth } from '../Redux/Slices/Auth';
+import { selectIsActivated } from '../Redux/Slices/IsActivated'
 import MDEditor from '@uiw/react-md-editor';
 import { useParams } from 'react-router-dom';
 import { ComentsById } from './ComentsById';

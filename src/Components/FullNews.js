@@ -1,6 +1,6 @@
 import { Paper } from "@mui/material";
 import { useEffect, useState } from "react";
-import axios from "../axios";
+import axios from "./axios";
 import { New } from "./New";
 export function FullNews(){
     const [NewData,SetNewsData]=useState([])

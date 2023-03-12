@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
-import axios from '../axios.js'
+import axios from './axios.js'
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -8,8 +8,8 @@ import Row from 'react-bootstrap/Row';
 import { Container } from 'react-bootstrap';
 import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { FecthSeries } from '../../Redux/Slices/AllSeries.js';
-import { selectIsAdmin } from '../../Redux/Slices/IsAdmin.js';
+import { FecthSeries } from '../Redux/Slices/AllSeries.js';
+import { selectIsAdmin } from '../Redux/Slices/IsAdmin.js';
 import { Paper } from '@mui/material';
 import MDEditor from '@uiw/react-md-editor';
 export function Admin() {

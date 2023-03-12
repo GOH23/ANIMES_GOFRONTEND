@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux"
-import { selectIsAuth } from "../../../Redux/Slices/Auth"
+import { selectIsAuth } from "../Redux/Slices/Auth"
 import { Alert, Button } from "@mui/material"
 import { useEffect, useState } from "react"
-import { FecthOptionGet } from "../../../Redux/Slices/OptionOfAnime";
+import { FecthOptionGet } from "../Redux/Slices/OptionOfAnime";
 import { useParams } from "react-router-dom";
-import axios from "../../axios.js";
-import { selectIsActivated } from "../../../Redux/Slices/IsActivated";
+import axios from "./axios.js";
+import { selectIsActivated } from "../Redux/Slices/IsActivated";
 export function StatusofAnime() {
     const dispatch = useDispatch();
     const { id } = useParams();

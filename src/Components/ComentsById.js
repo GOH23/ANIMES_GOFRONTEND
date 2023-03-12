@@ -1,12 +1,12 @@
 import { Avatar, Paper, Popper, Fade, Box, Button } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import MDEditor from "@uiw/react-md-editor";
-import axios from "../axios";
+import axios from "./axios";
 import { useState } from "react";
 import { BiMenu } from 'react-icons/bi'
 import { useSelector } from "react-redux";
 
-import { selectIsModer } from "../../Redux/Slices/IsModerator";
+import { selectIsModer } from "../Redux/Slices/IsModerator";
 export function ComentsById(props) {
     const [open, setOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);

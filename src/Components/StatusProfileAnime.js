@@ -1,6 +1,6 @@
 import { Avatar, List, ListItem, ListItemAvatar, ListItemText, Skeleton } from "@mui/material"
 import { useEffect, useState } from "react"
-import axios from "../axios"
+import axios from "./axios"
 import { grey } from "@mui/material/colors";
 
 import { Link } from "react-router-dom";

@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
-import axios from "../axios";
-import {CardAm} from '../CardComponent/CardAm'
+import axios from "./axios";
+import {CardAm} from './CardAm'
 export function ThreeCards() {
     const [MainAnimes, SetAnimes] = useState([])
     const [FilterAnimes, SetFilterAnimes] =useState([])

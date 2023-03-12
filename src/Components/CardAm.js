@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 
 import { CardActionArea, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { StarForOneCard } from './StarRatibgForAnime/StarForOneCard';
+import { StarForOneCard } from './StarForOneCard';
 
 export function CardAm(props) {
 

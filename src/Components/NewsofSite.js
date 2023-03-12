@@ -1,7 +1,7 @@
 import { Box, Button, createTheme, Divider, responsiveFontSizes, ThemeProvider, Typography } from '@mui/material';
 import { motion, Variants } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import axios from '../axios';
+import axios from './axios';
 import Carousel from 'react-bootstrap/Carousel';
 import { GrFormNextLink } from 'react-icons/gr'
 import { Link } from 'react-router-dom';

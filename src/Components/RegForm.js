@@ -1,18 +1,33 @@
-import { Box, Button, Paper, TextField, Typography } from "@mui/material";
-import { Badge } from "react-bootstrap";
+import { Avatar, Box, Button, Grid, Paper, TextField, Typography } from "@mui/material";
+import axios from "./axios.js";
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { FecthAuth, selectIsAuth } from '../../Redux/Slices/Auth'
-export function LoginForm() {
+import { Form, Badge } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { FecthRegister } from "../Redux/Slices/Register.js";
+import { useNavigate } from "react-router-dom";
+export function RegForm() {
+
+
+    const [Name, SetName] = useState('')
     const [Email, SetEmail] = useState('');
     const [Password, SetPassword] = useState('');
     const [HelpTextEmail, SetHelpTextEmail] = useState('');
     const [EmailError, SetEmailError] = useState(false);
     const [HelpTextPass, SetHelpTextPass] = useState('');
     const [PassError, SetPassError] = useState(false);
-    const dispatch = useDispatch()
-    const isAuth = useSelector(selectIsAuth)
+    const [imageUrl, SetImageUrl] = useState('')
+    const dispatch = useDispatch();
+    const nav = useNavigate()
+    const handleChangeFile = async (event) => {
+        try {
+            const FormDate = new FormData();
+            FormDate.append('image', event.target.files[0]);
+            const { data } = await axios.post('/upload', FormDate);
+            SetImageUrl(data.url)
+        } catch {
+
+        }
+    }
     const VerifyEmail = (el) => {
         let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (re.test(el)) {
@@ -37,29 +52,15 @@ export function LoginForm() {
 
         }
     }
-    const CheckLogin = async (Email, Password) => {
+    const Registration = async (Email, Password, Name) => {
         if (Email === null || Password === null) {
             return
         }
-        else {
-            try {
-                const data = await dispatch(FecthAuth({ email: Email, password: Password }))
-                if (!data.payload) {
-                    return alert('Ошибка в данных,попробуйте снова!')
-                }
-                if ('token' in data.payload) {
-                    window.localStorage.setItem('token', data.payload.token)
-                } else {
-                    alert('Ошибка в данных,попробуйте снова!')
-                }
-            } catch {
-                alert('Ошибка в данных,попробуйте снова!')
-            }
 
+        else {
+            const data = await dispatch(FecthRegister({ email: Email, fullName: Name, password: Password, avatarUrl: imageUrl }))
+            nav("/log")
         }
-    }
-    if (isAuth) {
-        return <Navigate to='/' />
     }
     return (<Box
 
@@ -77,12 +78,17 @@ export function LoginForm() {
         <Paper sx={{ padding: 2 }}>
             <h5 className="text-center">Animes<Badge bg="warning" text="dark">GO</Badge></h5>
             <Typography variant="h5" className="text-center" >
-                Вход
+                Создание аккаунта
             </Typography>
+            <Grid display='flex' justifyContent='center'>
+                <Avatar className="text-center mb-2" sx={{ width: 100, height: 100 }} src={`http://localhost:4444${imageUrl}`} />
+            </Grid>
             <form>
+                <Form.Control type="file" className="mb-3" title="Ваша аватарка!" accept="image/*" onChange={handleChangeFile} />
+                <TextField className="mb-3" label='Ваш никнейм' fullWidth required onChange={(el) => { SetName(el.target.value) }} />
                 <TextField type='email' className="mb-3" label='E-mail' error={EmailError} helperText={HelpTextEmail} fullWidth onChange={(el) => VerifyEmail(el.target.value)} />
-                <TextField type='password' name="password" autoComplete="off" className="mb-2" label='Пароль' error={PassError} helperText={HelpTextPass} fullWidth onChange={(el) => VerifyPassword(el.target.value)} />
-                <Button variant="contained" className="w-100" disabled={EmailError || PassError} onClick={() => CheckLogin(Email, Password)}>Войти</Button>
+                <TextField type='password' name="password" autoComplete="off" className="mb-3" label='Пароль' error={PassError} helperText={HelpTextPass} fullWidth onChange={(el) => VerifyPassword(el.target.value)} />
+                <Button variant="contained" className="w-100" disabled={EmailError || PassError} onClick={() => Registration(Email, Password, Name)}>Зарегистрироваться</Button>
             </form>
 
         </Paper>

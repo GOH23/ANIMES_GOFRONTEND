@@ -1,14 +1,14 @@
 import { AiFillStar } from 'react-icons/ai'
 import { Alert, Grid, Skeleton } from '@mui/material';
-import axios from '../../axios';
+import axios from './axios';
 import { blue, grey } from '@mui/material/colors';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { FecthStarsGet } from '../../../Redux/Slices/Star';
-import { selectIsAuth } from '../../../Redux/Slices/Auth';
-import { selectIsActivated } from '../../../Redux/Slices/IsActivated';
+import { FecthStarsGet } from '../Redux/Slices/Star';
+import { selectIsAuth } from '../Redux/Slices/Auth';
+import { selectIsActivated } from '../Redux/Slices/IsActivated';
 
 export function StarRating(props) {
     const StarRateAndId = props.starrate
