@@ -117,7 +117,7 @@ export function Admin() {
     return (<Container>
         <h1 className='text-center'>Панель администратора для добавления аниме</h1>
         <h2>Серии:</h2>
-        <Table variant="light" responsive bordered size="sm">
+        <Table variant="light" className='responsive_table' responsive bordered size="sm">
             <thead>
                 <tr>
                     <th>_id</th>
@@ -204,7 +204,7 @@ export function Admin() {
 
             : null}
         <h2>Аниме:</h2>
-        <Table variant="light" bordered responsive size="sm">
+        <Table variant="light" className='responsive_table' bordered responsive size="sm">
             <thead>
                 <tr>
                     <th>Айди аниме</th>
