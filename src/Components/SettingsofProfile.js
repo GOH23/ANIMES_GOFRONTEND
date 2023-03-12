@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Form } from "react-bootstrap"
 import { useSelector } from "react-redux"
 import { selectIsActivated } from "../Redux/Slices/IsActivated"
-import axios from "./axios"
+import axios from "./axios.js"
 export function SettingofProfile(props){
     const isActivated = useSelector(selectIsActivated)
     const [imageUrl, SetImageUrl] = useState('')

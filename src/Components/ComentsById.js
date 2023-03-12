@@ -1,7 +1,7 @@
 import { Avatar, Paper, Popper, Fade, Box, Button } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import MDEditor from "@uiw/react-md-editor";
-import axios from "./axios";
+import axios from "./axios.js";
 import { useState } from "react";
 import { BiMenu } from 'react-icons/bi'
 import { useSelector } from "react-redux";

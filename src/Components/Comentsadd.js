@@ -1,7 +1,7 @@
 import { Button } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { Alert, Pagination, Paper } from '@mui/material';
-import axios from './axios';
+import axios from './axios.js';
 import { useEffect, useState } from 'react';
 import { selectIsAuth } from '../Redux/Slices/Auth';
 import { selectIsActivated } from '../Redux/Slices/IsActivated'

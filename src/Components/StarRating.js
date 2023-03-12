@@ -1,6 +1,6 @@
 import { AiFillStar } from 'react-icons/ai'
 import { Alert, Grid, Skeleton } from '@mui/material';
-import axios from './axios';
+import axios from './axios.js';
 import { blue, grey } from '@mui/material/colors';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
