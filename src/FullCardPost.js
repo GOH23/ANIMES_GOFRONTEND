@@ -103,7 +103,6 @@ export function FullCardPost() {
                                 </Carousel>
                             }
                         </Col>
-
                     </Row>
                     {DefaulSeries !== '' ? <>
                         <Row>
@@ -115,7 +114,6 @@ export function FullCardPost() {
                             </Tabs>
                         </Row>
                         <Row>
-
                             <iframe title='Anime Player' src={DefaulSeries} width="640" height="710" frameBorder="0" allowFullScreen={true}></iframe>
                         </Row>
                     </> : <h4 className="text-center">Серии не загружены</h4>}
