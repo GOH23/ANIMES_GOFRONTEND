@@ -12,6 +12,5 @@ body{
     color: black;
 }
 .responsive_table{
-    height: 500px !important;
-    overflow: scroll;
+    max-height: 500px;
 }
