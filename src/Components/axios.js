@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../node_modules/axios/index";
 
 const instance = axios.create({
     baseURL: 'https://animesgo.onrender.com'
