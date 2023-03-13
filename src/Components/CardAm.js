@@ -18,7 +18,7 @@ export function CardAm(props) {
     return (<>
         {props.items.map((el ,ind)=> (<Grid key={el._id} item>
             <motion.div variants={itemVariants} initial="initial" custom={ind} whileInView="anim" viewport={{once: true}} >
-                <Card sx={{ maxWidth: 290 }}>
+                <Card sx={{ maxWidth: 290,height: '100%' }}>
                     <Link to={`/anime/${el._id}`} className='text-decoration-none'>
                         <CardActionArea>
                             <CardMedia
