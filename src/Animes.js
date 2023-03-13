@@ -28,7 +28,7 @@ export function AnimesList() {
                 }} color='info' sx={{fontSize: 20,width: '100%', backgroundColor: 'aliceblue' }} />
                 <Button  sx={{width: '100%',marginTop: 1}} variant='contained'>СБРОСИТЬ ВСЕ</Button>
             </Box>
-            <Grid container spacing={1} justifyContent="center">
+            <Grid container spacing={1} justifyContent="center" alignItems='stretch'>
                 <CardAm items={FilterAnimes} />
             </Grid>
         </Container>
