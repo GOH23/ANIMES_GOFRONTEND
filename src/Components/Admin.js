@@ -116,7 +116,7 @@ export function Admin() {
     }
     return (<Container>
         <h1 className='text-center'>Панель администратора для добавления аниме</h1>
-        <h2>Серии:</h2>
+        <h2 className='text-center'>Серии:</h2>
         <div className='table-responsive responsive_table'>
             <Table variant="light"  bordered size="sm">
                 <thead>
@@ -142,9 +142,9 @@ export function Admin() {
 
         <Form.Select aria-label="Default select example" className='mb-3' onChange={(el) => { SetOpSer(el.target.value) }}>
             <option>Выберите опцию</option>
-            <option value={1}>Создание серий для аниме</option>
+            <option value={1}>Добавление серий к аниме</option>
             <option value={2}>Удаление по идефикационнному ключу (_id)</option>
-            <option value={3}>Добавление серии или серий к существующему аниме</option>
+            <option value={3}>Создание серии к новому аниме</option>
         </Form.Select>
         {SelectedOptionInSeries == 3 ? <Form>
 
@@ -206,7 +206,7 @@ export function Admin() {
         </Form>
 
             : null}
-        <h2>Аниме:</h2>
+        <h2 className='text-center'>Аниме:</h2>
         <div className='table-responsive responsive_table'>
             <Table variant="light" bordered size="sm">
                 <thead>
@@ -237,7 +237,7 @@ export function Admin() {
             </Table>
         </div>
 
-        <h4>Добавить аниме</h4>
+        <h4 className='text-center'>Добавить аниме</h4>
         <Paper sx={{ padding: 1 }}>
             <Form>
                 <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">

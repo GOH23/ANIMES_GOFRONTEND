@@ -60,7 +60,9 @@ export function FullCardPost() {
                                     <img
                                         src={FullDesc.data.imageFontUrl}
                                         alt="NameofAnime"
-                                        className='rounded-2 mb-5'
+                                        height='300'
+                                        width='200'
+                                        className='rounded-2 mb-5 '
                                     />
                                     <h4>Рейтинг</h4>
                                     <StarRating starrate={FullDesc.data.starsratings} className="mb-3" />
@@ -87,7 +89,7 @@ export function FullCardPost() {
                                     {FullDesc.data.screensUrls.map((el, ind) => {
                                         return (<Carousel.Item key={ind}>
                                             <img
-
+                                                
                                                 className="d-block w-100"
                                                 src={el}
                                                 alt="Item"

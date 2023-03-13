@@ -13,12 +13,12 @@ export function CardAm(props) {
             x: -100
 
         },
-        anim: custom => ({ opacity: 1, x: 0, transition: { delay: custom * 0.25 } })
+        anim: custom => ({ opacity: 1, x: 0, transition: {delay: 0.25}})
     };
     return (<>
-        {props.items.map((el ,ind)=> (<Grid key={el._id} item>
-            <motion.div variants={itemVariants} initial="initial" custom={ind} whileInView="anim" viewport={{once: true}} >
-                <Card sx={{ maxWidth: 290,height: '100%' }}>
+        {props.items.map((el ,ind)=> (<Grid  key={el._id} item > 
+            <motion.div variants={itemVariants} initial="initial" className='alignitems'   custom={ind} whileInView="anim" viewport={{once: true}} >
+                <Card sx={{ maxWidth: 290,minWidth: 290 }} >
                     <Link to={`/anime/${el._id}`} className='text-decoration-none'>
                         <CardActionArea>
                             <CardMedia
@@ -27,7 +27,7 @@ export function CardAm(props) {
                                 image={el.imageFontUrl}
                                 alt='Rfhnbyrf' />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div" className='mb-0 text-dark text-center'>
+                                <Typography gutterBottom variant="h5" sx={{display: '-webkit-box',WebkitLineClamp: 2,overflow: 'hidden', textOverflow: 'ellipsis',WebkitBoxOrient: 'vertical',height: '65px'}} component="div" className='mb-0 text-dark text-center '>
                                     {el.title} <br />
                                 </Typography>
                                 <Typography gutterBottom variant="h5" component="div" className='mb-0 text-dark text-end'>
