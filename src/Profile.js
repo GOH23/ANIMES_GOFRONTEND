@@ -26,7 +26,7 @@ export function Profile() {
             <Paper sx={{ padding: 3 }} elevation={24} className='d-flex justify-content-center'>
                 <Row md={1}  >
                     <Col >
-                        <Avatar sx={{ height: 80, width: 80 }} src={`https://animesgo.onrender.com${data.data.UserData.avatarUrl}`} />
+                        <Avatar sx={{ height: 80, width: 80 }} src={`https://faithful-dog-purse.cyclic.app${data.data.UserData.avatarUrl}`} />
                         <h5 className="text-center">
                             {data.data.UserData.fullName}
                         </h5>

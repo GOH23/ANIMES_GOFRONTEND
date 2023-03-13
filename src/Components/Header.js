@@ -65,12 +65,12 @@ function Header(props) {
                     {UserData.status === 'loading' ?
                       <Skeleton variant="circular" width={40} height={40} />
                       : <>
-                        <Avatar sx={{ width: 50, height: 50 }} src={`https://animesgo.onrender.com${UserData.data.UserData.avatarUrl}`} className="mb-2" onClick={OpenModal}></Avatar>
+                        <Avatar sx={{ width: 50, height: 50 }} src={`https://faithful-dog-purse.cyclic.app${UserData.data.UserData.avatarUrl}`} className="mb-2" onClick={OpenModal}></Avatar>
                         <Modal show={ProfileInfo} size="lg"
                           aria-labelledby="contained-modal-title-vcenter"
                           centered onHide={CloseModal} >
                           <Modal.Header closeButton>
-                            <Avatar sx={{ width: 80, height: 80 }} src={`https://animesgo.onrender.com${UserData.data.UserData.avatarUrl}`}></Avatar>
+                            <Avatar sx={{ width: 80, height: 80 }} src={`https://faithful-dog-purse.cyclic.app${UserData.data.UserData.avatarUrl}`}></Avatar>
                             <Modal.Title >Ваш профиль: {UserData.data.UserData.fullName}</Modal.Title>
                           </Modal.Header>
                           <Modal.Body >

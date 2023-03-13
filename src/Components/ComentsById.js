@@ -34,7 +34,7 @@ export function ComentsById(props) {
             props.data.map((el) => {
                 return (<Paper key={el._id} data-color-mode='light' sx={{ padding: 3, margin: 2 }} elevation={24}>
                     <div>
-                        <Avatar src={`https://animesgo.onrender.com${el.user.avatarUrl}`} />
+                        <Avatar src={`https://faithful-dog-purse.cyclic.app${el.user.avatarUrl}`} />
                         <p>{el.user.fullName}</p>
 
                     </div>
