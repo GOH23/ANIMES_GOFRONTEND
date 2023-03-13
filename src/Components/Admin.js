@@ -117,26 +117,29 @@ export function Admin() {
     return (<Container>
         <h1 className='text-center'>Панель администратора для добавления аниме</h1>
         <h2>Серии:</h2>
-        <Table variant="light" className='responsive_table' responsive bordered size="sm">
-            <thead>
-                <tr>
-                    <th>_id</th>
-                    <th>Серия</th>
-                    <th>Айди аниме</th>
-                </tr>
-            </thead>
-            <tbody>
-                {seriesArray.map((el, ind) => {
-                    return (
-                        <tr key={ind}>
-                            <td>{el._id}</td>
-                            <td>{el.Series.join(", ")}</td>
-                            <td>{el.animeId}</td>
-                        </tr>)
-                })}
+        <div className='table-responsive responsive_table'>
+            <Table variant="light"  bordered size="sm">
+                <thead>
+                    <tr>
+                        <th>_id</th>
+                        <th>Серия</th>
+                        <th>Айди аниме</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {seriesArray.map((el, ind) => {
+                        return (
+                            <tr key={ind}>
+                                <td>{el._id}</td>
+                                <td>{el.Series.join(", ")}</td>
+                                <td>{el.animeId}</td>
+                            </tr>)
+                    })}
 
-            </tbody>
-        </Table>
+                </tbody>
+            </Table>
+        </div>
+
         <Form.Select aria-label="Default select example" className='mb-3' onChange={(el) => { SetOpSer(el.target.value) }}>
             <option>Выберите опцию</option>
             <option value={1}>Создание серий для аниме</option>
@@ -204,33 +207,36 @@ export function Admin() {
 
             : null}
         <h2>Аниме:</h2>
-        <Table variant="light" className='responsive_table' bordered responsive size="sm">
-            <thead>
-                <tr>
-                    <th>Айди аниме</th>
-                    <th>Название</th>
-                    <th>Описание</th>
-                    <th>Теги</th>
-                    <th>Кол-во просмотров</th>
-                    <th>Главная картинка</th>
-                    <th>Картинки в описании</th>
-                </tr>
-            </thead>
-            <tbody>
-                {Animes.map((el, ind) => {
-                    return (<tr key={ind}>
-                        <td>{el._id}</td>
-                        <td>{el.title}</td>
-                        <td>{el.desc}</td>
-                        <td>{el.tags.join(", ")}</td>
-                        <td>{el.viewsCount}</td>
-                        <td>{el.imageFontUrl}</td>
-                        <td>{el.screensUrls.join(", ")}</td>
-                    </tr>)
-                })}
-            </tbody>
+        <div className='table-responsive responsive_table'>
+            <Table variant="light" bordered size="sm">
+                <thead>
+                    <tr>
+                        <th>Айди аниме</th>
+                        <th>Название</th>
+                        <th>Описание</th>
+                        <th>Теги</th>
+                        <th>Кол-во просмотров</th>
+                        <th>Главная картинка</th>
+                        <th>Картинки в описании</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {Animes.map((el, ind) => {
+                        return (<tr key={ind}>
+                            <td>{el._id}</td>
+                            <td>{el.title}</td>
+                            <td>{el.desc}</td>
+                            <td>{el.tags.join(", ")}</td>
+                            <td>{el.viewsCount}</td>
+                            <td>{el.imageFontUrl}</td>
+                            <td>{el.screensUrls.join(", ")}</td>
+                        </tr>)
+                    })}
+                </tbody>
 
-        </Table>
+            </Table>
+        </div>
+
         <h4>Добавить аниме</h4>
         <Paper sx={{ padding: 1 }}>
             <Form>
