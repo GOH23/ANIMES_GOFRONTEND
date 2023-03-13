@@ -3,12 +3,6 @@ import { CardAm } from './Components/CardAm.js'
 import axios from './Components/axios'
 import { useEffect, useState } from 'react'
 import { TextField, Autocomplete } from "@mui/material";
-import CheckIcon from "@mui/icons-material/Check";
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import ListSubheader from '@mui/material/ListSubheader';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
 export function AnimesList() {
     const [MainAnimes, SetAnimes] = useState([])
     const [FilterAnimes, SetFilterAnimes] = useState([])
