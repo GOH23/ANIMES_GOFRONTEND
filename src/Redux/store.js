@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import {  AllSeriesReducer } from "./Slices/AllSeries";
 import { authReducer } from "./Slices/Auth";
 import { CardFullReducer } from "./Slices/CardFullPost";
+import { OtherUserReducer } from "./Slices/GetOtherUser";
 import { IsActivatedReducer } from "./Slices/IsActivated";
 import { IsAdminReducer } from "./Slices/IsAdmin";
 import { IsModerReducer } from "./Slices/IsModerator";
@@ -18,8 +19,8 @@ const store = configureStore({
         option: OptionGetReducer,
         isactivated: IsActivatedReducer,
         isadmin: IsAdminReducer,
-        ismoder: IsModerReducer
-
+        ismoder: IsModerReducer,
+        otheruser: OtherUserReducer
     }
 })
 export default store;

@@ -18,6 +18,7 @@ import { FecthIsAdmin } from './Redux/Slices/IsAdmin.js';
 import { Footer } from './Components/Footer.js';
 import { FullNews } from './Components/FullNews.js';
 import { FecthIsModer } from './Redux/Slices/IsModerator.js';
+import { ProfileCheck } from './ProfileCheck.js';
 export function Appindex() {
     const dispatch = useDispatch();
 
@@ -37,7 +38,10 @@ export function Appindex() {
             <Header />
             <Routes>
                 <Route exact path='/' element={<MainPage/>}/>
+
                 <Route  path='/animes' element={<AnimesList />} />
+                <Route  path='/profile/:id' element={<ProfileCheck />} />
+                <Route path='/anime/:id' element={<FullCardPost />} />
                 <Route path='/anime/:id' element={<FullCardPost />} />
                 <Route path='/reg' element={<RegForm />} />
                 <Route path='/news' element={<FullNews />} />

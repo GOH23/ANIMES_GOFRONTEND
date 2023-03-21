@@ -1,9 +1,9 @@
 body{
-    background: url("../../public/img/anime-background-26.jpg");
+    background: url("../../public/img/anime-background-26.jpg") no-repeat center center fixed;
     background-size: 100% auto;
     background-size: cover;
-    background-repeat: no-repeat;
-    background: cover;
+
+
 }
 .NewItemCarousel{
     background-color: rgba(38, 0, 255, 0.575);
@@ -13,4 +13,13 @@ body{
 }
 .responsive_table{
     max-height: 500px;
+}
+.backcolor{
+    background-color: rgba(255, 255, 255, 0);
+}
+.blockpopover{
+    max-width:600px;
+}
+.container_main{
+    min-height: 100vh;
 }

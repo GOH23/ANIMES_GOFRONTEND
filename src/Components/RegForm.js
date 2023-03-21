@@ -22,7 +22,7 @@ export function RegForm() {
         try {
             const FormDate = new FormData();
             FormDate.append('image', event.target.files[0]);
-            const { data } = await axios.post('/upload', FormDate);
+            const { data } = await axios.post('/tmp/upload', FormDate);
             SetImageUrl(data.url)
         } catch {
 
@@ -81,7 +81,7 @@ export function RegForm() {
                 Создание аккаунта
             </Typography>
             <Grid display='flex' justifyContent='center'>
-                <Avatar className="text-center mb-2" sx={{ width: 100, height: 100 }} src={`http://localhost:4444${imageUrl}`} />
+                <Avatar className="text-center mb-2" sx={{ width: 100, height: 100 }} src={`${imageUrl}`} />
             </Grid>
             <form>
                 <Form.Control type="file" className="mb-3" title="Ваша аватарка!" accept="image/*" onChange={handleChangeFile} />

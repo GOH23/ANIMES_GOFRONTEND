@@ -12,24 +12,39 @@ export function StatusS(props) {
             Set(responce.data)
         })
     }, [])
-    if(props.animes.length===0){
-        return(null)
+    if (props.animes.length === 0) {
+        return (null)
     }
     // eslint-disable-next-line
-    props.animes.map((el)=>{
-        data.push(AnimesFull.filter(item=>item._id===el.AnimeId)[0])
+    props.animes.map((el) => {
+        data.push(AnimesFull.filter(item => item._id === el.AnimeId)[0])
     })
-    if(data[0]===undefined){
-        return(<Skeleton>
-            <ListItem>
-                <ListItemAvatar>
-                    <Avatar sx={{ width: 50, height: 70 }} variant="square"/>
-                </ListItemAvatar>
-                <ListItemText/>
-            </ListItem>
-        </Skeleton>)
+    if (data[0] === undefined) {
+        return (<>
+            <Skeleton>
+                <ListItem sx={{marginBottom: 1}}>
+                    <ListItemAvatar>
+                        <Avatar sx={{ width: 50, height: 70 }} variant="square" />
+                    </ListItemAvatar>
+                    <ListItemText />
+                </ListItem>
+                <ListItem sx={{marginBottom: 1}}>
+                    <ListItemAvatar>
+                        <Avatar sx={{ width: 50, height: 70 }} variant="square" />
+                    </ListItemAvatar>
+                    <ListItemText />
+                </ListItem>
+                <ListItem sx={{marginBottom: 1}}>
+                    <ListItemAvatar>
+                        <Avatar sx={{ width: 50, height: 70 }} variant="square" />
+                    </ListItemAvatar>
+                    <ListItemText />
+                </ListItem>
+            </Skeleton>
+        </>)
     }
     return (<List sx={{
+
         width: '100%',
         maxWidth: 360,
         bgcolor: 'background.paper',
@@ -40,11 +55,11 @@ export function StatusS(props) {
         '& ul': { padding: 0 },
     }}>
         {data.map((el, ind) => {
-            return (<Link className="text-reset text-decoration-none" to={`/anime/${el._id}`}><ListItem key={ind} disablePadding sx={{border: 2,borderRadius: 2,borderColor: grey[300],marginBottom: 1}}>
+            return (<Link key={ind} className="text-reset text-decoration-none" to={`/anime/${el._id}`}><ListItem disablePadding sx={{ border: 2, borderRadius: 2, borderColor: grey[300], marginBottom: 1 }}>
                 <ListItemAvatar>
-                    <Avatar sx={{ width: 50, height: 70 }} variant="square" src={el.imageFontUrl}/>
+                    <Avatar sx={{ width: 50, height: 70 }} variant="square" src={el.imageFontUrl} />
                 </ListItemAvatar>
-                <ListItemText  primary={el.title} />
+                <ListItemText primary={el.title} />
             </ListItem></Link>)
         })}
     </List>)

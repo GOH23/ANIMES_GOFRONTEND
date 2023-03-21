@@ -7,8 +7,9 @@ export function MainPage() {
     
         <h3 className="text-center">Новости сайта</h3>
         <News/>
-        <h3 className="text-center">Выбор пользователей</h3>
+        <h3 className="text-center">Лучшие аниме по оценкам</h3>
         <ThreeCards/>
+        <h3 className="text-center">Топ по просмотрам пользователей</h3>
     </Paper>)
 
 }

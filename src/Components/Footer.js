@@ -1,5 +1,5 @@
 import { Box, Divider } from "@mui/material";
-import { grey } from "@mui/material/colors";
+
 import { Badge } from "react-bootstrap";
 
 export function Footer() {

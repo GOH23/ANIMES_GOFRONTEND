@@ -103,7 +103,7 @@ export function StatusofAnime() {
 
 
     return (<>
-        <h4>Статус аниме</h4>
+        <p className="fs-4 text-center">Статус аниме</p>
         <Button className="m-1 w-100" variant={StatusOfButton1} color="success" onClick={() => ClickShow1()}>СМОТРЮ</Button>
         <Button className="m-1 w-100" variant={StatusOfButton2} color="primary" onClick={() => ClickShow2()}>ПРОСМОТРЕНО </Button>
         <Button className="m-1 w-100" variant={StatusOfButton3} color='info' onClick={() => ClickShow3()}>ПЕРЕСМАТРИВАЮ </Button>
