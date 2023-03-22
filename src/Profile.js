@@ -24,7 +24,7 @@ export function Profile() {
     }
     else {
 
-        return (<Container className="mx-auto">
+        return (<Container className="mx-auto mt-4">
             <Paper sx={{ padding: 3 }} elevation={24} className='d-flex justify-content-center'>
                 <Row md={1}  >
                     <Col >

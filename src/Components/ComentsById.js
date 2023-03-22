@@ -34,7 +34,7 @@ export function ComentsById(props) {
                         <Grid item sx={{ marginRight: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
                             <OverlayTrigger
                                 trigger={['click']}
-                                placement="right"
+                                placement="bottom"
                                 containerPadding={20}
                                 overlay={
                                     <Popover id="popover-positioned-right" className="blockpopover" >

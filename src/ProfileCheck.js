@@ -32,7 +32,7 @@ export function ProfileCheck() {
     }
     else {
 
-        return (<Container className="mx-auto container_main" >
+        return (<Container className="mx-auto container_main mt-4" >
             <Paper sx={{ padding: 3 }} elevation={24} className='d-flex justify-content-center'>
                 <Row md={1}  >
                     <Col >
@@ -46,6 +46,7 @@ export function ProfileCheck() {
                         </Tooltip>
 
                         <Modal
+                            style={{ 'zIndex': '9999' }}
                             size="lg"
                             centered
                             show={SetShowAvatarFullImage}
@@ -78,49 +79,49 @@ export function ProfileCheck() {
                         </Divider>
                         <MDEditor.Markdown className="fs-5 mb-2" source={otherdata.data.profileDesc} />
                     </Col>
-                    {otherdata.data.isPrivacy 
-                    ? <>
-                        <Alert severity="info">Данные профиля закрыты для просмотра другим пользователям</Alert>
-                    </> 
-                    : <>
-                        <Col className="text-center">
-                            <Divider>
-                                <Chip label='Категории аниме' className="fs-5 mb-2" />
-                            </Divider>
-                            <Row md={5} xs={1}>
-                                <Col>
-                                    <Divider>
-                                        <Chip label='СМОТРЮ' className=" mb-2" />
-                                    </Divider>
-                                    <StatusS animes={otherdata.data.optionsofanime.filter(item => item.status === 'СМОТРЮ')} />
-                                </Col>
-                                <Col>
-                                    <Divider>
-                                        <Chip label='ПРОСМОТРЕНО' className=" mb-2" />
-                                    </Divider>
-                                    <StatusS animes={otherdata.data.optionsofanime.filter(item => item.status === 'ПРОСМОТРЕНО')} />
-                                </Col>
-                                <Col>
-                                    <Divider>
-                                        <Chip label='ПЕРЕСМАТРИВАЮ' className=" mb-2" />
-                                    </Divider>
-                                    <StatusS animes={otherdata.data.optionsofanime.filter(item => item.status === 'ПЕРЕСМАТРИВАЮ')} />
-                                </Col>
-                                <Col>
-                                    <Divider>
-                                        <Chip label='БРОШЕНО' className=" mb-2" />
-                                    </Divider>
-                                    <StatusS animes={otherdata.data.optionsofanime.filter(item => item.status === 'БРОШЕНО')} />
-                                </Col>
-                                <Col>
-                                    <Divider>
-                                        <Chip label='ОТЛОЖЕНО' className=" mb-2" />
-                                    </Divider>
-                                    <StatusS animes={otherdata.data.optionsofanime.filter(item => item.status === 'ОТЛОЖЕНО')} />
-                                </Col>
-                            </Row>
-                        </Col>
-                    </>}
+                    {otherdata.data.isPrivacy
+                        ? <>
+                            <Alert severity="info">Данные профиля закрыты для просмотра другим пользователям</Alert>
+                        </>
+                        : <>
+                            <Col className="text-center">
+                                <Divider>
+                                    <Chip label='Категории аниме' className="fs-5 mb-2" />
+                                </Divider>
+                                <Row md={5} xs={1}>
+                                    <Col>
+                                        <Divider>
+                                            <Chip label='СМОТРЮ' className=" mb-2" />
+                                        </Divider>
+                                        <StatusS animes={otherdata.data.optionsofanime.filter(item => item.status === 'СМОТРЮ')} />
+                                    </Col>
+                                    <Col>
+                                        <Divider>
+                                            <Chip label='ПРОСМОТРЕНО' className=" mb-2" />
+                                        </Divider>
+                                        <StatusS animes={otherdata.data.optionsofanime.filter(item => item.status === 'ПРОСМОТРЕНО')} />
+                                    </Col>
+                                    <Col>
+                                        <Divider>
+                                            <Chip label='ПЕРЕСМАТРИВАЮ' className=" mb-2" />
+                                        </Divider>
+                                        <StatusS animes={otherdata.data.optionsofanime.filter(item => item.status === 'ПЕРЕСМАТРИВАЮ')} />
+                                    </Col>
+                                    <Col>
+                                        <Divider>
+                                            <Chip label='БРОШЕНО' className=" mb-2" />
+                                        </Divider>
+                                        <StatusS animes={otherdata.data.optionsofanime.filter(item => item.status === 'БРОШЕНО')} />
+                                    </Col>
+                                    <Col>
+                                        <Divider>
+                                            <Chip label='ОТЛОЖЕНО' className=" mb-2" />
+                                        </Divider>
+                                        <StatusS animes={otherdata.data.optionsofanime.filter(item => item.status === 'ОТЛОЖЕНО')} />
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </>}
                 </Row>
             </Paper>
         </Container>)

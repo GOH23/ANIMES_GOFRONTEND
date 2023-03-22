@@ -1,25 +1,45 @@
-body{
+body {
     background: url("../../public/img/anime-background-26.jpg") no-repeat center center fixed;
     background-size: 100% auto;
     background-size: cover;
 
 
 }
-.NewItemCarousel{
+
+.NewItemCarousel {
     background-color: rgba(38, 0, 255, 0.575);
 }
-.link-color{
+
+.link-color {
     color: black;
 }
-.responsive_table{
+
+.responsive_table {
     max-height: 500px;
 }
-.backcolor{
+
+.backcolor {
     background-color: rgba(255, 255, 255, 0);
 }
-.blockpopover{
-    max-width:600px;
+
+.blockpopover {
+    max-width: 600px;
 }
-.container_main{
+
+.container_main {
     min-height: 100vh;
+}
+
+.mri {
+    margin-right: 0px;
+}
+
+.slick-slide>div {
+    display: grid;
+    justify-content: center;
+    width: 50%;
+    margin-right: 0px;
+    margin: auto;
+    height: 550px;
+    padding: 0px;
 }
