@@ -39,6 +39,7 @@ export function Profile() {
 
                         <Modal
                             size="lg"
+                            style={{'zIndex': '9999'}}
                             centered
                             show={SetShowAvatarFullImage}
                         >
@@ -48,7 +49,7 @@ export function Profile() {
                                 </Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
-                                <img className="rounded-2 img-fluid" src={`${data.data.UserData.avatarUrl}`} />
+                                <img className="rounded-2 img-fluid w-100" src={`${data.data.UserData.avatarUrl}`} />
 
                             </Modal.Body>
                             <Modal.Footer>

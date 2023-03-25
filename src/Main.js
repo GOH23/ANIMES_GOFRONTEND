@@ -26,7 +26,6 @@ export function MainPage() {
         <News />
         <h3 className="text-center">Лучшие аниме по оценкам</h3>
         <ThreeCards animes={Animes}/>
-        <h3 className="text-center">Топ по просмотрам пользователей</h3>
     </Paper>)
 
 }

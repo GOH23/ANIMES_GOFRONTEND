@@ -34,11 +34,9 @@ export function CardsCarousel(props) {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 3,
         autoplay: true,
-
         arrows: false,
         responsive: [{
             breakpoint: 1200,

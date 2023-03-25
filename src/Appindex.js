@@ -19,6 +19,7 @@ import { Footer } from './Components/Footer.js';
 import { FullNews } from './Components/FullNews.js';
 import { FecthIsModer } from './Redux/Slices/IsModerator.js';
 import { ProfileCheck } from './ProfileCheck.js';
+import { Onas } from './Onas.js';
 export function Appindex() {
     const dispatch = useDispatch();
 
@@ -48,6 +49,7 @@ export function Appindex() {
                 <Route path='/log' element={<LoginForm />} />
                 <Route path='/admin' element={<Admin />} />
                 <Route path='/profile' element={<Profile/>}/>
+                <Route path='/about' element={<Onas/>}/>
             </Routes>
             <Footer/>
         </BrowserRouter>

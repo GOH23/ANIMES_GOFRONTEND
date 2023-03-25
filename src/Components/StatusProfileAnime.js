@@ -44,14 +44,12 @@ export function StatusS(props) {
         </>)
     }
     return (<List sx={{
-
         width: '100%',
-        maxWidth: 360,
         bgcolor: 'background.paper',
         position: 'relative',
         overflow: 'auto',
         maxHeight: 300,
-
+        marginBottom: 1,
         '& ul': { padding: 0 },
     }}>
         {data.map((el, ind) => {

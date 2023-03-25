@@ -58,6 +58,7 @@ function Header(props) {
                   <Link to='/' className="nav-link text-center"><h5>Главная</h5></Link>
                   <Divider className="mb-2" />
                   <Link to='/animes' className="nav-link text-center" ><h5>Аниме-лист</h5></Link>
+                  <Link to='/about' className="nav-link text-center" ><h5>О нас</h5></Link>
                   <Divider className="mb-2" />
                   {!isAuth ? <h5 className="mb-0"><NavDropdown
                     title="Форма авторизации"
